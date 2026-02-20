@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <div class="container">
+      <header class="dash-header">
+        <div>
+          <h2>Dashboard</h2>
+          <p id="welcome"></p>
+        </div>
+        <div class="logout">
+          <button onclick="logout()">Logout</button>
+        </div>
+      </header>
+
+      <div class="dash-main">
+        <nav class="sidenav">
+          <ul>
+            <li><a href="#" data-target="homeView">Home</a></li>
+            <li><a href="#" data-target="profileView">Profile</a></li>
+          </ul>
+        </nav>
+
+        <main class="content">
+          <section id="homeView" class="portfolio-grid">
+            <div class="card">
+              <div class="card-image">
+                
+                <img id="homePreview" src="assets/Welcome.gif" alt="Home preview" />
+              </div>
+              <div class="card-body">
+                <h4>Welcome</h4>
+                <p>Welcome to your dashboard. Feel free to explore.</p>
+              </div>
+            </div>
+             <div class="card">
+                <div class="card-image">
+                  <img src="assets/chilling.gif" alt="Activity preview">
+                </div>
+                <div class="card-body">
+                  <h4>Tips no.1</h4>
+                  <p>Dont stress out, just take a break and relax.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-image">
+                  <img src="assets/coding.gif" alt="News preview">
+                </div>
+                <div class="card-body">
+                  <h4>Tips no.2</h4>
+                  <p>Back to stress mode then go back to tips no.1</p>
+                </div>
+              </div>
+          </section>
+
+          <section id="profileView" class="profile-view" style="display:none;">
+            <div class="card">
+              <div class="card-body">
+                <div class="promo-profile">
+                  <div class="profile-photo">
+                    <img id="profileImageLarge" src="assets/Clint.jpg" alt="Profile photo">
+                  </div>
+                  <div class="profile-info">
+                    <h3 id="profileName">Clint Jasper Villanueva</h3>
+                    <p class="muted" id="profileRole">Full‑stack Developer • Pogi</p>
+
+                    <div class="contact-links">
+                      <a href="https://www.facebook.com/clintorrrrry" class="btn">Facebook</a>
+                      <a href="https://github.com/clint0205" target="_blank" rel="noopener" class="btn">GitHub</a>
+                    </div>
+                    <div style="margin-top:12px;">
+                      <button id="contactBtn" class="btn contact-btn">Contact Me</button>
+                    </div>
+
+                    <div id="contactForm" style="display:none; margin-top:12px;">
+                      <div class="contact-form">
+                        <input id="contactName" type="text" placeholder="Your name" />
+                        <input id="contactEmail" type="email" placeholder="Your email" />
+                        <textarea id="contactMessage" rows="4" placeholder="Your message"></textarea>
+                        <div style="display:flex; gap:8px; margin-top:8px;">
+                          <button id="contactSubmit" class="btn">Send</button>
+                          <button id="contactCancel" class="btn" style="background:#ccc;color:#000;">Cancel</button>
+                        </div>
+                        <p id="contactStatus" style="display:none; margin-top:8px;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <aside class="contacts">
+          <div class="promo-profile">
+            <div class="profile-card">
+
+              <div class="profile-info">
+                <h3>Clint Jasper Villanueva</h3>
+                <p class="muted">Full‑stack Developer • Pogi</p>
+
+                <div class="contact-links">
+                  <a href="https://www.facebook.com/clintorrrrry" class="btn">Facebook</a>
+                  <a href="https://github.com/clint0205" target="_blank" rel="noopener" class="btn">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
